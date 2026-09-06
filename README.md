@@ -52,7 +52,7 @@ The sampling coordinates, depths, and elemental concentration values are primary
 
 The GIS-ready dataset is available in this repository:
 
-`
+`escravos-river-geochemical-gis/blob/main/escravos_sediment_samples.csv'
 
  GIS Software
 
