@@ -1,4 +1,4 @@
-GIS-Based Spatial Assessment of Naturally Occurring Radioactive and Associated Geochemical Elements in Escravos River Sediments
+# GIS-Based Spatial Assessment of Naturally Occurring Radioactive and Associated Geochemical Elements in Escravos River Sediments
 
 ## Project Brief
 
@@ -8,7 +8,7 @@ The study covers approximately 28.5 km of the Escravos River and consists of nin
 
 The sampling coordinates and laboratory concentration results were prepared as a GIS-ready dataset and imported into QGIS for spatial visualisation and analysis.
 
- #Spatial Question
+### Spatial Question
 
 How do Th, U, Nb, Rb, Ba, and Zr concentrations vary spatially along the Escravos River, and which sampling locations show relatively higher concentrations that may warrant further environmental monitoring?
 
@@ -28,7 +28,7 @@ Nine sediment sampling locations are included:
 8. Benin River Junction
 9. Benikrukru Entrance
 
- Dataset
+### Dataset
 
 The project dataset contains:
 
