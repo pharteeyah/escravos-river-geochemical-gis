@@ -1,7 +1,5 @@
 GIS-Based Spatial Assessment of Naturally Occurring Radioactive and Associated Geochemical Elements in Escravos River Sediments
 
->[Note] Text text text
-
 ## Project Brief
 
 This project uses Geographic Information System (GIS) techniques to assess the spatial distribution of naturally occurring radioactive and associated geochemical elements in bottom sediments of the Escravos River, Delta State, Nigeria.
