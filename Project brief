@@ -1,0 +1,242 @@
+# Project Brief
+
+## Project Title
+
+### GIS-Based Spatial Assessment of Naturally Occurring Radioactive and Associated Geochemical Elements in Escravos River Sediments**
+
+## 1. Background and Rationale
+
+River-bottom sediments can accumulate naturally occurring and anthropogenically introduced elements and therefore provide useful information about the geochemical characteristics of aquatic environments.
+
+This GIS project builds on an existing field and laboratory study of bottom sediments from the Escravos River in Delta State, Nigeria. The original research investigated the concentration, spatial distribution and possible sources of Thorium (Th), Uranium (U), Niobium (Nb), Rubidium (Rb), Barium (Ba) and Zirconium (Zr). One of the objectives of the original study was to develop geospatial maps showing areas of relatively high elemental concentration and their distribution within the river system.
+
+Nine composite bottom-sediment samples were collected along an approximately 28.5 km section of the Escravos River. The samples were prepared and subsequently analysed using Inductively Coupled Plasma Mass Spectrometry (ICP-MS).
+
+This project reorganises the sampling coordinates, depths and laboratory concentration results into a GIS-ready dataset for analysis in QGIS. The purpose is to examine how the measured concentrations vary geographically among the nine sampling locations and to identify locations showing relatively higher concentrations that may warrant further environmental monitoring.
+
+## 2. Spatial Question
+
+**How do Th, U, Nb, Rb, Ba, and Zr concentrations vary spatially along the Escravos River, and which sampling locations show relatively higher concentrations that may warrant further environmental monitoring?**
+
+## 3. Aim
+
+To use GIS techniques to assess and visualise the spatial distribution of Th, U, Nb, Rb, Ba and Zr concentrations in bottom sediments of the Escravos River and identify sampling locations with relatively higher measured concentrations.
+
+## 4. Objectives
+
+* Prepare a GIS-ready dataset containing the nine sampling locations, geographic coordinates, sampling depths and laboratory results.
+* Convert the original sampling coordinates from Degrees, Minutes and Seconds (DMS) to Decimal Degrees (DD) for GIS use.
+* Plot and verify all nine sediment sampling stations in QGIS.
+* Visualise the spatial variation of Th, U, Nb, Rb, Ba and Zr concentrations among the sampling stations.
+* Compare measured concentrations across the nine locations and identify locations with relatively higher and lower values.
+* Use the existing sampling-location and geospatial information from the original research as supporting spatial data.
+* Document the datasets, sources, GIS workflow and project outputs in a reproducible GitHub repository.
+
+## 5. Study Area
+
+The study area is located along the Escravos River in Delta State, within the Niger Delta region of Nigeria.
+
+The original field study covered approximately **28.5 km**, extending from the Jones Creek junction to Areton, before the Gulf of Guinea. The Escravos River study area is an estuarine environment influenced by tidal processes and is characterised by mangrove vegetation.
+
+Communities occurring along the wider river basin include Egua I, Okerenkoko, Kurutie, Kunukunuma, Tebijor, Azama, Ughoton, Oporosa, Escravos and Areton.
+
+Nine sediment sampling stations were used for the study:
+
+1. Jones' Creek Tributary
+2. Okerenkoko (Debama Quarters) Water Front
+3. Okerenkoko University Jetty Water Front
+4. Seitobobor Polo
+5. Kurutie
+6. Areton
+7. Escravos Water Front
+8. Benin River Junction
+9. Benikrukru Entrance
+
+### Existing Study-Area Map
+
+The original research contains **Figure 3.1 – Sample Location Map**, showing the geographic distribution of the sediment sampling locations along the Escravos River.
+
+This map will be retained as a supporting source map for the GIS project and can be compared with the sampling points recreated from the coordinate dataset in QGIS.
+
+> **Repository image:** `images/escravos_sample_location_map.png`
+
+Once the image is uploaded to the repository, it can be displayed here using:
+
+`![Escravos River Sample Location Map](images/escravos_sample_location_map.png)`
+
+## 6. Sampling Design and Measurements
+
+Nine composite bottom-sediment samples were collected from the Escravos River bed using a grab sampler. Sampling was carried out along the approximately 28.5 km study stretch.
+
+Each of the nine sampling locations has a geographic coordinate and recorded sampling depth.
+
+| Station | Sampling Location                        | Depth (m) | Latitude (DMS) | Longitude (DMS) |
+| ------- | ---------------------------------------- | --------: | -------------- | --------------- |
+| 1       | Jones' Creek Tributary                   |      3.58 | 05°38'20.7"N   | 005°24'22.3"E   |
+| 2       | Okerenkoko (Debama Quarters) Water Front |      2.55 | 05°37'59.8"N   | 005°23'44.3"E   |
+| 3       | Okerenkoko University Jetty Water Front  |      3.22 | 05°37'08.1"N   | 005°23'24.8"E   |
+| 4       | Seitobobor Polo                          |      5.83 | 05°35'38.0"N   | 005°23'43.1"E   |
+| 5       | Kurutie                                  |      2.82 | 05°34'58.2"N   | 005°20'56.2"E   |
+| 6       | Areton                                   |      8.21 | 05°36'16.2"N   | 005°11'35.7"E   |
+| 7       | Escravos Water Front                     |      6.25 | 05°36'22.4"N   | 005°11'46.7"E   |
+| 8       | Benin River Junction                     |      9.77 | 05°37'39.9"N   | 005°17'34.9"E   |
+| 9       | Benikrukru Entrance                      |      5.50 | 05°38'01.1"N   | 005°17'35.8"E   |
+
+The sediment samples were prepared and sent to the **University of the Witwatersrand, Johannesburg, South Africa**, for ICP-MS analysis.
+
+Each of the nine sediment samples was analysed for the same six elements. Therefore:
+
+**9 sampling locations × 6 measured elements = 54 elemental concentration measurements.**
+
+The six measured elements are:
+
+| Element   | Symbol | Unit  |
+| --------- | ------ | ----- |
+| Thorium   | Th     | mg/kg |
+| Uranium   | U      | mg/kg |
+| Niobium   | Nb     | mg/kg |
+| Rubidium  | Rb     | mg/kg |
+| Barium    | Ba     | mg/kg |
+| Zirconium | Zr     | mg/kg |
+
+Thorium and uranium are naturally radioactive elements. Nb, Rb, Ba and Zr are treated as associated geochemical elements for the purposes of this GIS assessment.
+
+## 7. Datasets and Sources
+
+The project uses primary field and laboratory data from the original Escravos River sediment research together with spatial information contained in the research document.
+
+| Dataset                      | Description                                                                                              | Source                                                                                              |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| Sediment sampling locations  | Names and identifiers of the nine sediment sampling stations                                             | Original Escravos River field study; incorporated into the GIS-ready dataset                        |
+| Sampling coordinates         | Original DMS latitude and longitude for each of the nine stations, converted to Decimal Degrees for QGIS | Original field coordinate records; [GIS-ready CSV](escravos_sediment_samples.csv)                   |
+| Sampling depth               | Recorded sediment sampling depth for each station, ranging from 2.55 m to 9.77 m                         | Original field study; [GIS-ready CSV](escravos_sediment_samples.csv)                                |
+| Elemental concentration data | Laboratory concentrations of Th, U, Nb, Rb, Ba and Zr in mg/kg for each sampling station                 | ICP-MS laboratory results; [GIS-ready CSV](escravos_sediment_samples.csv)                           |
+| Original sample-location map | Existing map showing the geographic distribution of the sampling locations                               | Figure 3.1 of the original Escravos River sediment study; `images/escravos_sample_location_map.png` |
+| Existing geospatial maps     | Existing spatial maps illustrating elemental distribution in the original research                       | Figure 4.2 of the original Escravos River sediment study; supporting GIS reference                  |
+| Satellite basemap            | Basemap used for geographic context and visual verification of sampling locations in QGIS                | Google Satellite imagery                                                                            |
+
+### Primary GIS Dataset
+
+The main GIS-ready dataset for this project is:
+
+**[Download/View `escravos_sediment_samples.csv`](escravos_sediment_samples.csv)**
+
+The dataset contains one row for each of the nine sampling locations and fields for:
+
+* Station number
+* Sampling location
+* Latitude
+* Longitude
+* Sampling depth (m)
+* Th concentration (mg/kg)
+* U concentration (mg/kg)
+* Nb concentration (mg/kg)
+* Rb concentration (mg/kg)
+* Ba concentration (mg/kg)
+* Zr concentration (mg/kg)
+
+## 8. Existing Elemental Concentration Data
+
+The ICP-MS laboratory results provide concentration measurements for all six elements at all nine stations.
+
+The existing data show clear differences between sampling locations. For example, the highest measured Th concentration occurs at Station 1 (24.760 mg/kg), while the highest Nb concentration occurs at Station 9 (21.533 mg/kg). Rb reaches its highest measured concentration at Station 8 (96.007 mg/kg), Ba at Station 7 (400.877 mg/kg), and Zr at Station 6 (118.853 mg/kg).
+
+These measured differences provide the attribute data that will be linked to the geographic sampling locations in QGIS.
+
+## 9. Existing Geospatial Information
+
+The original research already contains a section on **Geospatial Analysis and Mapping** and includes geospatial maps of sediment distribution in the study area.
+
+These existing maps are useful as **supporting source material**, while the current GeoDev project will independently structure the underlying coordinates and laboratory measurements into a reproducible GIS dataset and QGIS project.
+
+The new GIS workflow therefore does not treat the existing maps as a replacement for the spatial analysis. Instead, they provide background spatial information that can be compared with maps generated from the cleaned GIS-ready dataset.
+
+## 10. GIS Methodology
+
+### Coordinate Preparation
+
+The original station coordinates were recorded in Degrees, Minutes and Seconds (DMS). They are converted into Decimal Degrees (DD) to allow direct import into QGIS.
+
+### Point-Layer Creation
+
+The cleaned CSV dataset is imported into QGIS using:
+
+* **X field:** Longitude
+* **Y field:** Latitude
+* **Coordinate Reference System:** WGS 84 (EPSG:4326)
+
+This produces a point layer representing the nine sediment sampling locations.
+
+### Location Verification
+
+The plotted points are checked against satellite imagery and the original study-area/sample-location map to confirm that the stations occur in their expected geographic positions.
+
+### Attribute Verification
+
+Each geographic point is linked to its corresponding:
+
+* Sampling location
+* Sampling depth
+* Th concentration
+* U concentration
+* Nb concentration
+* Rb concentration
+* Ba concentration
+* Zr concentration
+
+### Spatial Visualisation
+
+The six concentration fields can be visualised individually using graduated point symbols in QGIS. This allows stations with relatively higher and lower measured concentrations to be identified spatially.
+
+Because only nine sampling locations are available, the primary analysis will focus on the measured sampling points. Any continuous interpolation should be interpreted cautiously because of the small number and spatial arrangement of samples.
+
+## 11. Coordinate Reference System
+
+The GIS-ready sampling dataset uses:
+
+**WGS 84 — EPSG:4326**
+
+The original DMS coordinates were converted into decimal-degree latitude and longitude values while retaining the original station locations.
+
+## 12. Expected GIS Outputs
+
+The project is expected to produce:
+
+* A cleaned GIS-ready CSV dataset.
+* A georeferenced point layer representing the nine sediment sampling stations.
+* A saved QGIS project.
+* Spatial visualisations showing the distribution of Th, U, Nb, Rb, Ba and Zr.
+* A study-area/sampling-location map.
+* Identification of sampling stations with relatively higher measured concentrations.
+* A documented GitHub repository containing the project brief, dataset, GIS project and relevant map outputs.
+
+## 13. Repository Structure
+
+The repository will contain:
+
+```text
+escravos-river-geochemical-gis/
+│
+├── README.md
+├── project-brief.md
+├── escravos_sediment_samples.csv
+├── escravos_geochemical_analysis.qgz
+│
+└── images/
+    ├── escravos_sample_location_map.png
+    └── elemental_distribution_map.png
+```
+
+Additional GIS outputs can be added to the `images` folder as the analysis progresses.
+
+## 14. Limitations
+
+The study is based on nine sediment sampling locations distributed along an approximately 28.5 km section of the Escravos River. Consequently, the GIS analysis describes spatial variation among the sampled locations and should not automatically be generalised to the entire Escravos River or Niger Delta.
+
+The elemental measurements are concentrations reported in **mg/kg**. They are not direct measurements of radioactive activity in Bq/kg. Therefore, locations with relatively higher concentrations should be interpreted as locations of geochemical interest rather than automatically classified as areas of radiological contamination or health risk.
+
+The original research also notes that determining whether elemental sources are geogenic or anthropogenic is difficult without detailed local background data. Consequently, the GIS analysis will focus primarily on spatial patterns rather than making unsupported causal conclusions.
+
+## 15. Reproducibility
+
+The GitHub repository is intended to make the GIS workflow transparent and reproducible. The cleaned dataset, project brief, QGIS project and map outputs will be stored together so that the sampling locations and elemental concentration data can be reviewed and reused for subsequent spatial analysis.
