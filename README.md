@@ -12,7 +12,7 @@ The sampling coordinates and laboratory concentration results were prepared as a
 
 How do Th, U, Nb, Rb, Ba, and Zr concentrations vary spatially along the Escravos River, and which sampling locations show relatively higher concentrations that may warrant further environmental monitoring?
 
- Study Area
+ ### Study Area
 
 The study area is the Escravos River in Delta State, within the Niger Delta region of Nigeria.
 
