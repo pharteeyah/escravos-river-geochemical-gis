@@ -8,9 +8,9 @@ The study covers approximately 28.5 km of the Escravos River and consists of nin
 
 The sampling coordinates and laboratory concentration results were prepared as a GIS-ready dataset and imported into QGIS for spatial visualisation and analysis.
 
- Spatial Question
+ #Spatial Question
 
-How do Th, U, Nb, Rb, Ba, and Zr concentrations vary spatially along the Escravos River, and which sampling locations show relatively higher concentrations that may warrant further environmental monitoring?**
+How do Th, U, Nb, Rb, Ba, and Zr concentrations vary spatially along the Escravos River, and which sampling locations show relatively higher concentrations that may warrant further environmental monitoring?
 
  Study Area
 
