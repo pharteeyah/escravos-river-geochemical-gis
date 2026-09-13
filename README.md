@@ -46,7 +46,7 @@ The original coordinates were recorded in Degrees, Minutes and Seconds (DMS) and
 
 Coordinate Reference System: WGS 84 (EPSG:4326)
 
- Data Source
+ ## Data Source
 
 The sampling coordinates, depths, and elemental concentration values are primary field and laboratory data from the Escravos River sediment study.
 
@@ -58,9 +58,7 @@ The GIS-ready dataset is available in this repository:
 
 QGIS is used to plot and analyse the nine sediment sampling locations and their associated elemental concentrations.
 
-The QGIS project file is available at:
 
-`
 
 
 
