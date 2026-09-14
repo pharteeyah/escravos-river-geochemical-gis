@@ -22,7 +22,7 @@ The dataset contains nine sediment sampling locations along this section of the 
 
 ### Datasets and Sources
 #3# Escravos River sediment sampling data [GIS-ready sediment dataset](escravos_sediment_samples.csv) |
-| Sampling location map | Provides the original geographic context of the nine sampling stations and will help with checking the locations plotted in QGIS. | Original Escravos River sediment research project, Figure 3.1 |
+ Sampling location map 
 | Google Satellite basemap | Provides geographic context for viewing and checking the sampling locations in QGIS. | [Google Maps](https://www.google.com/maps) |
 
 ### GIS Approach
