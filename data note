@@ -1,0 +1,132 @@
+## Project
+
+Project:
+GIS-Based Spatial Assessment of Naturally Occurring Radioactive and Associated Geochemical Elements in Escravos River Sediments
+
+Research Question:
+How do Th, U, Nb, Rb, Ba, and Zr concentrations vary spatially along the Escravos River, and which sampling locations show relatively higher concentrations that may warrant further environmental monitoring?
+
+This data note describes the datasets used for the project, their sources, feature counts, key columns, geometry types, and any gaps or missing values identified during inspection in QGIS.
+
+
+ 1. Escravos River Sediment Sampling Dataset
+
+Dataset: 
+Escravos River Sediment Sampling and Element Concentration Data
+
+Source: 
+Existing Escravos River sediment research data. The sampling coordinates and depths were obtained from Table 3.1 of the research, while the elemental concentration results were obtained from Table 4.1.
+
+Source file:
+[escravos_sediment_samples.csv](escravos_sediment_samples.csv)
+
+### Description
+
+The dataset contains nine bottom-sediment sampling locations along approximately 28.5 km of the Escravos River in Delta State, Nigeria.
+
+The original sampling information contains the location, depth and coordinates of each station. The laboratory results contain concentrations of Thorium (Th), Uranium (U), Niobium (Nb), Rubidium (Rb), Barium (Ba), and Zirconium (Zr). The sediment samples were analysed using ICP-MS.
+
+The sampling and laboratory information were combined into a GIS-ready CSV and opened in QGIS using the longitude and latitude coordinates.
+
+### Data Used
+
+- Feature count: 9
+- Geometry type: Point
+- CRS: EPSG:4326 — WGS 84
+- Format: CSV
+- Concentration unit: mg/kg
+
+### Key Columns
+
+| Column | Description |
+|---|---|
+| `station` | Sampling station number from 1 to 9 |
+| `sampling_location` | Name of the sediment sampling location |
+| `latitude` | Latitude of the sampling location in decimal degrees |
+| `longitude` | Longitude of the sampling location in decimal degrees |
+| `depth_m` | Sampling depth in metres |
+| `Th_mgkg` | Thorium concentration in mg/kg |
+| `U_mgkg` | Uranium concentration in mg/kg |
+| `Nb_mgkg` | Niobium concentration in mg/kg |
+| `Rb_mgkg` | Rubidium concentration in mg/kg |
+| `Ba_mgkg` | Barium concentration in mg/kg |
+| `Zr_mgkg` | Zirconium concentration in mg/kg |
+
+### Gaps and Missing Values
+
+All nine sampling locations have geographic coordinates, sampling depths and concentration measurements for all six elements.
+
+No missing values were identified in the coordinate or elemental concentration fields.
+
+The main limitation is the number of sampling locations. There are only nine sampling points across the approximately 28.5 km study area, so the measured concentrations represent those sampled locations rather than every part of the Escravos River.
+
+
+## 2. OpenStreetMap Waterway Dataset
+
+Dataset: Escravos Study Area Waterway Network
+
+**Source:** OpenStreetMap data downloaded directly into QGIS using the QuickOSM plugin.
+
+Source link: https://www.openstreetmap.org/
+
+### Description
+
+The dataset contains mapped waterway features within and around the Escravos River study area.
+
+It was downloaded from OpenStreetMap using QuickOSM in QGIS with the `waterway` key. Leaving the value open allowed the query to retrieve different mapped waterway types within the selected study extent.
+
+The resulting waterway network was opened and inspected in QGIS alongside the nine sediment sampling locations.
+
+### Data Used
+
+- Feature count: 774
+- Geometry type: LineString
+- CRS: EPSG:4326 — WGS 84
+- Format: GeoPackage (GPKG)
+- Saved file: `escravos_waterways_osm.gpkg`
+
+### Key Columns
+
+| Column | Description |
+|---|---|
+| `full_id` | Full OpenStreetMap feature identifier |
+| `osm_id` | OpenStreetMap identifier for each feature |
+| `osm_type` | Type of OpenStreetMap object |
+| `waterway` | Classification of the mapped waterway |
+| `name` | Name of the waterway where available |
+| `intermittent` | Indicates whether the waterway is intermittent where recorded |
+| `wikidata` | Wikidata identifier where available |
+| `alt_name` | Alternative name of the feature where available |
+| `tunnel` | Tunnel or culvert information where recorded |
+| `layer` | OpenStreetMap layer information |
+| `is_in:country` | Country information where recorded |
+
+The `waterway` field contains different mapped waterway types, including river, stream and canal.
+
+### Gaps and Missing Values
+
+Several optional OpenStreetMap attributes contain NULL values. Missing values were observed particularly in fields such as `name`, `wikidata`, `alt_name` and `intermittent`.
+
+These missing attributes do not prevent the dataset from being used in this project because the main information required is the location and geometry of the mapped waterways.
+
+OpenStreetMap is contributed geographic information, so the 774 features represent waterways currently mapped within the queried study area. The dataset should not be assumed to contain every waterway that physically exists in the area.
+
+
+## 3. Dataset Summary
+
+| Dataset | Source | Features | Geometry | CRS |
+|---|---|---:|---|---|
+| Escravos River Sediment Sampling Data | Existing sediment research | 9 | Point | EPSG:4326 |
+| Escravos Study Area Waterway Network | OpenStreetMap / QuickOSM | 774 | LineString | EPSG:4326 |
+
+---
+
+ Initial Data Assessment
+
+Both datasets were successfully opened and inspected in QGIS.
+
+The sediment dataset contains the nine sampling locations and measurements of Th, U, Nb, Rb, Ba and Zr at each location. No missing coordinate or concentration values were identified.
+
+The OpenStreetMap dataset contains 774 mapped waterway features within the queried study area. It provides the surrounding river, stream and canal network needed to place the sediment sampling locations within their wider geographic context.
+
+Both datasets use EPSG:4326 — WGS 84 and can therefore be displayed together in QGIS. The main data-quality issue identified is the presence of NULL values in several optional OpenStreetMap attributes. This does not affect the use of the waterway geometries for the current project.
